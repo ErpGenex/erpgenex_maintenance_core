@@ -1,0 +1,121 @@
+{
+ "charts": [],
+ "content": "[{\"id\": \"erpgenex-onboarding\", \"type\": \"onboarding\", \"data\": {\"onboarding_name\": \"ERPGENEX — Maintenance Core\", \"col\": 12}}, {\"id\": \"emc-h1\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Maintenance Core</b></span><br><span class=\\\"text-muted\\\">CMMS — service requests, work orders, preventive schedules, SLA</span>\", \"col\": 12}}, {\"id\": \"emc-c1\", \"type\": \"card\", \"data\": {\"card_name\": \"Requests & SLA\", \"col\": 4}}, {\"id\": \"emc-c2\", \"type\": \"card\", \"data\": {\"card_name\": \"Execution\", \"col\": 4}}, {\"id\": \"emc-c3\", \"type\": \"card\", \"data\": {\"card_name\": \"Planning & taxonomy\", \"col\": 4}}, {\"id\": \"emc-c4\", \"type\": \"card\", \"data\": {\"card_name\": \"Reliability analytics\", \"col\": 12}}]",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "tool",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Maintenance Core",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Requests & SLA",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Core Service Request",
+   "link_count": 0,
+   "link_to": "Core Service Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Core SLA Profile",
+   "link_count": 0,
+   "link_to": "Core SLA Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Execution",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Core Work Order",
+   "link_count": 0,
+   "link_to": "Core Work Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Planning & taxonomy",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Core PM Schedule",
+   "link_count": 0,
+   "link_to": "Core PM Schedule",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Core Classification Code",
+   "link_count": 0,
+   "link_to": "Core Classification Code",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reliability analytics",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Core Work Order Reliability KPIs",
+   "link_count": 0,
+   "link_to": "Core Work Order Reliability KPIs",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-05-11 18:00:00",
+ "modified_by": "Administrator",
+ "module": "ERPGenEx Maintenance Core",
+ "name": "Maintenance Core",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 7.67,
+ "shortcuts": [],
+ "title": "Maintenance Core"
+}

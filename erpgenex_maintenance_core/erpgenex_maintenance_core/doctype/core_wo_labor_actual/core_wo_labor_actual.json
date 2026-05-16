@@ -1,0 +1,64 @@
+{
+	"creation": "2026-05-15 12:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"skill_role",
+		"technician",
+		"planned_hours",
+		"actual_hours",
+		"labor_rate",
+		"labor_cost"
+	],
+	"fields": [
+		{
+			"fieldname": "skill_role",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Skill / Role"
+		},
+		{
+			"fieldname": "technician",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Technician",
+			"options": "User"
+		},
+		{
+			"fieldname": "planned_hours",
+			"fieldtype": "Float",
+			"label": "Planned Hours"
+		},
+		{
+			"fieldname": "actual_hours",
+			"fieldtype": "Float",
+			"in_list_view": 1,
+			"label": "Actual Hours"
+		},
+		{
+			"fieldname": "labor_rate",
+			"fieldtype": "Currency",
+			"label": "Labor Rate"
+		},
+		{
+			"fieldname": "labor_cost",
+			"fieldtype": "Currency",
+			"in_list_view": 1,
+			"label": "Labor Cost",
+			"read_only": 1
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"istable": 1,
+	"links": [],
+	"modified": "2026-05-15 12:00:00.000000",
+	"module": "ERPGenEx Maintenance Core",
+	"name": "Core WO Labor Actual",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 0
+}

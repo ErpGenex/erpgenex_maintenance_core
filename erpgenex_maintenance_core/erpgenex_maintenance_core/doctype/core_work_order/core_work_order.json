@@ -1,0 +1,399 @@
+{
+	"actions": [],
+	"allow_rename": 0,
+	"autoname": "naming_series:",
+	"creation": "2026-05-15 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"naming_series",
+		"company",
+		"branch",
+		"legacy_asset_work_order",
+		"service_request",
+		"pm_schedule",
+		"column_break_1",
+		"status",
+		"work_order_type",
+		"priority",
+		"sla_profile",
+		"section_subject",
+		"pmc_property_unit",
+		"re_unit_inventory",
+		"subject_doctype",
+		"subject_name",
+		"section_maximo_rca",
+		"failure_class",
+		"failure_mode",
+		"problem_code",
+		"cause_code",
+		"remedy_code",
+		"column_break_rca",
+		"asset_down",
+		"failure_datetime",
+		"functional_restore_datetime",
+		"downtime_hours",
+		"section_schedule",
+		"planned_start",
+		"planned_end",
+		"completion_date",
+		"column_break_2",
+		"assigned_to",
+		"contractor_supplier",
+		"section_cost",
+		"estimated_cost",
+		"actual_cost",
+		"cost_center",
+		"section_labor",
+		"labor_actuals",
+		"section_material",
+		"column_break_inventory",
+		"issue_warehouse",
+		"maintenance_stock_entry",
+		"material_actuals",
+		"section_details",
+		"description",
+		"resolution_notes"
+	],
+	"fields": [
+		{
+			"default": "CWO-.####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"label": "Series",
+			"options": "CWO-.####",
+			"reqd": 1
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Company",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"fieldname": "branch",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Branch",
+			"options": "Branch"
+		},
+		{
+			"description": "Name of an omnexa_fixed_assets Asset Work Order for migration traceability (no Link — avoids cross-app DocType dependency).",
+			"fieldname": "legacy_asset_work_order",
+			"fieldtype": "Data",
+			"label": "Legacy Asset Work Order",
+			"read_only": 1
+		},
+		{
+			"fieldname": "service_request",
+			"fieldtype": "Link",
+			"label": "Service Request",
+			"options": "Core Service Request"
+		},
+		{
+			"fieldname": "pm_schedule",
+			"fieldtype": "Link",
+			"label": "PM Schedule",
+			"options": "Core PM Schedule"
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Draft",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Draft\nPlanned\nIn Progress\nCompleted\nCancelled",
+			"reqd": 1
+		},
+		{
+			"fieldname": "work_order_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Work Order Type",
+			"options": "\nCorrective\nPreventive\nEmergency\nInspection\nCalibration\nPredictive",
+			"reqd": 1
+		},
+		{
+			"default": "Medium",
+			"fieldname": "priority",
+			"fieldtype": "Select",
+			"label": "Priority",
+			"options": "Low\nMedium\nHigh\nCritical",
+			"reqd": 1
+		},
+		{
+			"fieldname": "sla_profile",
+			"fieldtype": "Link",
+			"label": "SLA Profile",
+			"options": "Core SLA Profile"
+		},
+		{
+			"fieldname": "section_subject",
+			"fieldtype": "Section Break",
+			"label": "Subject / premises"
+		},
+		{
+			"fieldname": "pmc_property_unit",
+			"fieldtype": "Link",
+			"label": "PMC Property Unit",
+			"options": "PMC Property Unit"
+		},
+		{
+			"fieldname": "re_unit_inventory",
+			"fieldtype": "Link",
+			"label": "RE Unit Inventory",
+			"options": "RE Unit Inventory"
+		},
+		{
+			"fieldname": "subject_doctype",
+			"fieldtype": "Link",
+			"label": "Subject DocType",
+			"options": "DocType"
+		},
+		{
+			"fieldname": "subject_name",
+			"fieldtype": "Dynamic Link",
+			"label": "Subject",
+			"options": "subject_doctype"
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_maximo_rca",
+			"fieldtype": "Section Break",
+			"label": "Failure analysis (IBM Maximo-style hierarchy)"
+		},
+		{
+			"fieldname": "failure_class",
+			"fieldtype": "Link",
+			"label": "Failure Class",
+			"options": "Core Classification Code"
+		},
+		{
+			"fieldname": "failure_mode",
+			"fieldtype": "Link",
+			"label": "Failure Mode",
+			"options": "Core Classification Code"
+		},
+		{
+			"fieldname": "problem_code",
+			"fieldtype": "Link",
+			"label": "Problem Code",
+			"options": "Core Classification Code"
+		},
+		{
+			"fieldname": "cause_code",
+			"fieldtype": "Link",
+			"label": "Cause Code",
+			"options": "Core Classification Code"
+		},
+		{
+			"fieldname": "remedy_code",
+			"fieldtype": "Link",
+			"label": "Remedy Code",
+			"options": "Core Classification Code"
+		},
+		{
+			"fieldname": "column_break_rca",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "0",
+			"fieldname": "asset_down",
+			"fieldtype": "Check",
+			"label": "Asset / Production Down"
+		},
+		{
+			"fieldname": "failure_datetime",
+			"fieldtype": "Datetime",
+			"label": "Failure / Start Down"
+		},
+		{
+			"fieldname": "functional_restore_datetime",
+			"fieldtype": "Datetime",
+			"label": "Functional Restore"
+		},
+		{
+			"fieldname": "downtime_hours",
+			"fieldtype": "Float",
+			"label": "Downtime (hours)",
+			"description": "Supports ISO 55000 / reliability KPIs (MTTR, MTBF reporting).",
+			"read_only": 1
+		},
+		{
+			"fieldname": "section_schedule",
+			"fieldtype": "Section Break",
+			"label": "Schedule"
+		},
+		{
+			"fieldname": "planned_start",
+			"fieldtype": "Datetime",
+			"label": "Planned Start"
+		},
+		{
+			"fieldname": "planned_end",
+			"fieldtype": "Datetime",
+			"label": "Planned End"
+		},
+		{
+			"fieldname": "completion_date",
+			"fieldtype": "Datetime",
+			"label": "Completion Date"
+		},
+		{
+			"fieldname": "column_break_2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "assigned_to",
+			"fieldtype": "Link",
+			"label": "Assigned To",
+			"options": "User"
+		},
+		{
+			"fieldname": "contractor_supplier",
+			"fieldtype": "Link",
+			"label": "Contractor (Supplier)",
+			"options": "Supplier"
+		},
+		{
+			"fieldname": "section_cost",
+			"fieldtype": "Section Break",
+			"label": "Costs"
+		},
+		{
+			"fieldname": "estimated_cost",
+			"fieldtype": "Currency",
+			"label": "Estimated Cost"
+		},
+		{
+			"fieldname": "actual_cost",
+			"fieldtype": "Currency",
+			"label": "Actual Cost",
+			"read_only": 1
+		},
+		{
+			"description": "Optional; flows to Stock Entry and auto-posted Journal Entry lines for maintenance material issues.",
+			"fieldname": "cost_center",
+			"fieldtype": "Link",
+			"label": "Cost Center",
+			"options": "Cost Center"
+		},
+		{
+			"fieldname": "section_labor",
+			"fieldtype": "Section Break",
+			"label": "Labor Plan / Actual"
+		},
+		{
+			"fieldname": "labor_actuals",
+			"fieldtype": "Table",
+			"label": "Labor Actuals",
+			"options": "Core WO Labor Actual"
+		},
+		{
+			"fieldname": "section_material",
+			"fieldtype": "Section Break",
+			"label": "Materials Plan / Actual"
+		},
+		{
+			"fieldname": "column_break_inventory",
+			"fieldtype": "Column Break"
+		},
+		{
+			"description": "When set, submitting the work order creates an omnexa_accounting Stock Entry (Material Issue) for stocked Items on material lines.",
+			"fieldname": "issue_warehouse",
+			"fieldtype": "Link",
+			"label": "Issue Warehouse",
+			"options": "Warehouse"
+		},
+		{
+			"fieldname": "maintenance_stock_entry",
+			"fieldtype": "Link",
+			"label": "Material Issue Stock Entry",
+			"options": "Stock Entry",
+			"read_only": 1
+		},
+		{
+			"fieldname": "material_actuals",
+			"fieldtype": "Table",
+			"label": "Material Actuals",
+			"options": "Core WO Material Actual"
+		},
+		{
+			"fieldname": "section_details",
+			"fieldtype": "Section Break",
+			"label": "Description"
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Small Text",
+			"label": "Description"
+		},
+		{
+			"fieldname": "resolution_notes",
+			"fieldtype": "Small Text",
+			"label": "Resolution Notes"
+		}
+	],
+	"grid_page_length": 50,
+	"index_web_pages_for_search": 1,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2026-05-11 18:05:00.000000",
+	"module": "ERPGenEx Maintenance Core",
+	"name": "Core Work Order",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"cancel": 1,
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"cancel": 1,
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Desk User",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"cancel": 1,
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Maintenance Manager",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

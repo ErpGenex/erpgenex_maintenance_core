@@ -1,0 +1,23 @@
+[
+	{
+		"desk_access": 1,
+		"doctype": "Role",
+		"is_custom": 1,
+		"name": "Maintenance Manager",
+		"role_name": "Maintenance Manager"
+	},
+	{
+		"desk_access": 0,
+		"doctype": "Role",
+		"is_custom": 1,
+		"name": "Maintenance Portal User",
+		"role_name": "Maintenance Portal User"
+	},
+	{
+		"desk_access": 1,
+		"doctype": "Role",
+		"is_custom": 1,
+		"name": "Maintenance Technician",
+		"role_name": "Maintenance Technician"
+	}
+]

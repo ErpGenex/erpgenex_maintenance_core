@@ -1,0 +1,214 @@
+{
+	"actions": [],
+	"allow_rename": 0,
+	"autoname": "naming_series:",
+	"creation": "2026-05-15 12:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"naming_series",
+		"company",
+		"branch",
+		"column_break_1",
+		"is_active",
+		"frequency_type",
+		"interval_days",
+		"section_subject",
+		"subject_doctype",
+		"subject_name",
+		"section_calendar",
+		"last_generated_date",
+		"next_due_date",
+		"section_meter",
+		"meter_name",
+		"asset_meter_type",
+		"meter_interval",
+		"last_meter_reading",
+		"section_job",
+		"default_work_order_type",
+		"job_instructions",
+		"priority"
+	],
+	"fields": [
+		{
+			"default": "CPMS-.####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"label": "Series",
+			"options": "CPMS-.####",
+			"reqd": 1
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Company",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"fieldname": "branch",
+			"fieldtype": "Link",
+			"label": "Branch",
+			"options": "Branch"
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "1",
+			"fieldname": "is_active",
+			"fieldtype": "Check",
+			"label": "Active"
+		},
+		{
+			"fieldname": "frequency_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Frequency Type",
+			"options": "Time-Based\nMeter-Based\nTime And Meter",
+			"reqd": 1
+		},
+		{
+			"fieldname": "interval_days",
+			"fieldtype": "Int",
+			"label": "Interval (days)",
+			"non_negative": 1
+		},
+		{
+			"fieldname": "section_subject",
+			"fieldtype": "Section Break",
+			"label": "Asset / Location Subject"
+		},
+		{
+			"fieldname": "subject_doctype",
+			"fieldtype": "Link",
+			"label": "Subject DocType",
+			"options": "DocType"
+		},
+		{
+			"fieldname": "subject_name",
+			"fieldtype": "Dynamic Link",
+			"label": "Subject",
+			"options": "subject_doctype"
+		},
+		{
+			"fieldname": "section_calendar",
+			"fieldtype": "Section Break",
+			"label": "Calendar PM"
+		},
+		{
+			"fieldname": "last_generated_date",
+			"fieldtype": "Date",
+			"label": "Last Generated Date"
+		},
+		{
+			"fieldname": "next_due_date",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "Next Due Date"
+		},
+		{
+			"fieldname": "section_meter",
+			"fieldtype": "Section Break",
+			"label": "Meter PM (aligned with meter readings)"
+		},
+		{
+			"fieldname": "meter_name",
+			"fieldtype": "Data",
+			"label": "Meter Label",
+			"description": "Optional label; filtering uses Meter Type below."
+		},
+		{
+			"fieldname": "asset_meter_type",
+			"fieldtype": "Select",
+			"label": "Meter Type",
+			"description": "Matches Asset Meter Reading.meter_type",
+			"options": "\nRuntime\nTemperature\nPressure\nVibration\nEnergy\nLoad\nUtilization"
+		},
+		{
+			"fieldname": "meter_interval",
+			"fieldtype": "Float",
+			"label": "Meter Interval"
+		},
+		{
+			"fieldname": "last_meter_reading",
+			"fieldtype": "Float",
+			"label": "Last Meter Reading Snapshot"
+		},
+		{
+			"fieldname": "section_job",
+			"fieldtype": "Section Break",
+			"label": "Job Template"
+		},
+		{
+			"default": "Preventive",
+			"fieldname": "default_work_order_type",
+			"fieldtype": "Select",
+			"label": "Default WO Type",
+			"options": "Preventive\nInspection\nCalibration\nPredictive"
+		},
+		{
+			"fieldname": "job_instructions",
+			"fieldtype": "Text Editor",
+			"label": "Job Instructions"
+		},
+		{
+			"default": "Medium",
+			"fieldname": "priority",
+			"fieldtype": "Select",
+			"label": "Priority",
+			"options": "Low\nMedium\nHigh\nCritical"
+		}
+	],
+	"grid_page_length": 50,
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2026-05-11 18:05:00.000000",
+	"module": "ERPGenEx Maintenance Core",
+	"name": "Core PM Schedule",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Desk User",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Maintenance Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

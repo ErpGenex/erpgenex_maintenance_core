@@ -1,0 +1,24 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2026-05-16 16:00:00",
+ "disabled": 0,
+ "doctype": "Report",
+ "filters": [
+  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company", "reqd": 1},
+  {"fieldname": "branch", "fieldtype": "Link", "label": "Branch", "options": "Branch"},
+  {"fieldname": "from_date", "fieldtype": "Date", "label": "From Date"},
+  {"fieldname": "to_date", "fieldtype": "Date", "label": "To Date"}
+ ],
+ "is_standard": "Yes",
+ "module": "ERPGenEx Maintenance Core",
+ "name": "Core Reliability by Classification",
+ "ref_doctype": "Core Work Order",
+ "report_name": "Core Reliability by Classification",
+ "report_type": "Script Report",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Desk User"},
+  {"role": "Maintenance Manager"}
+ ]
+}

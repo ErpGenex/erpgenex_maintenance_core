@@ -1,0 +1,18 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2026-05-16 18:00:00",
+ "doctype": "Report",
+ "filters": [
+  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company", "reqd": 1},
+  {"fieldname": "from_date", "fieldtype": "Date", "label": "From Date"},
+  {"fieldname": "to_date", "fieldtype": "Date", "label": "To Date"}
+ ],
+ "is_standard": "Yes",
+ "module": "ERPGenEx Maintenance Core",
+ "name": "Core Contractor Scorecard",
+ "ref_doctype": "Core Work Order",
+ "report_name": "Core Contractor Scorecard",
+ "report_type": "Script Report",
+ "roles": [{"role": "System Manager"}, {"role": "Desk User"}, {"role": "Maintenance Manager"}]
+}
