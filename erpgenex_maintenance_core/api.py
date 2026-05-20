@@ -94,6 +94,28 @@ def portal_get_my_service_requests(limit_start: int | None = None, limit_page_le
 
 
 @frappe.whitelist()
+def preview_sla_status(
+	priority: str = "Medium",
+	sla_profile: str | None = None,
+	opened_at: str | None = None,
+) -> dict:
+	"""SAP PM parity — SLA breach preview without mutating documents."""
+	from frappe.utils import now_datetime
+
+	from erpgenex_maintenance_core.pm_sla import is_sla_breached
+
+	opened = opened_at or str(now_datetime())
+	return is_sla_breached(opened, priority=priority, sla_profile=sla_profile)
+
+
+@frappe.whitelist()
+def preview_wo_backlog(company: str) -> dict:
+	from erpgenex_maintenance_core.pm_parity import preview_wo_backlog as _preview
+
+	return _preview(company)
+
+
+@frappe.whitelist()
 def make_core_work_order(service_request: str) -> str:
 	"""Create a draft Core Work Order from a Core Service Request."""
 	frappe.has_permission("Core Service Request", "read", doc=service_request, throw=True)
