@@ -154,3 +154,10 @@ def make_core_work_order(service_request: str) -> str:
 	wo.insert(ignore_permissions=False)
 
 	return wo.name
+
+
+@frappe.whitelist()
+def preview_sector_kpi(scenario: str | None = None, params: str | None = None) -> dict:
+	from omnexa_core.omnexa_core.vertical_api import preview_sector_kpi as _core_preview
+
+	return _core_preview("maintenance_core", scenario=scenario, params=params)
