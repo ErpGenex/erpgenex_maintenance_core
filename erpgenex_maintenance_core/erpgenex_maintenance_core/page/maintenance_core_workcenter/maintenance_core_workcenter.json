@@ -1,0 +1,16 @@
+{
+	"doctype": "Page",
+	"module": "ERPGenEx Maintenance Core",
+	"name": "maintenance-core-workcenter",
+	"page_name": "maintenance-core-workcenter",
+	"standard": "Yes",
+	"title": "Maintenance Workcenter",
+	"roles": [
+		{
+			"role": "System Manager"
+		},
+		{
+			"role": "Company Admin"
+		}
+	]
+}
