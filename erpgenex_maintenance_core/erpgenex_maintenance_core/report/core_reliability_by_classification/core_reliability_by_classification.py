@@ -8,6 +8,8 @@ from collections import defaultdict
 
 import frappe
 from frappe import _
+
+from omnexa_core.omnexa_core.utils.report_charts import auto_chart_for_columns
 from frappe.utils import flt, get_datetime
 
 
