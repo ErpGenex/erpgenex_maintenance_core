@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import frappe
 from frappe import _
+
+from omnexa_core.omnexa_core.utils.report_charts import auto_chart_for_columns
 from frappe.utils import flt
 
 
@@ -49,4 +51,5 @@ def execute(filters=None):
 		{"label": _("Avg Cost"), "fieldname": "avg_cost", "fieldtype": "Currency", "width": 100},
 		{"label": _("Avg Downtime (h)"), "fieldname": "avg_downtime_hours", "fieldtype": "Float", "width": 110},
 	]
-	return columns, rows
+	chart = auto_chart_for_columns(rows, columns)
+	return columns, rows, None, chart
